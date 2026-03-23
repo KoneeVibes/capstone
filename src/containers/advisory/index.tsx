@@ -15,14 +15,14 @@ export const Advisory = () => {
 					color={"var(--dark-color-variant-I)"}
 				>
 					We believe that legal excellence should be a growth engine, not a
-					barrier — where ever entrepreneur deserves institutional-grade
-					protection without institutional complexity When businesses thrive
+					barrier — entrepreneurs deserves institutional-grade
+					protection without institutional complexity because when businesses thrive
 					unburdened by legal friction, they ignite prosperity
 				</Typography>
 			</Box>
 			<Stack className="foot-note">
 				<Box component={"div"} className="border-line" />
-				<Box>
+				<Box overflow={"hidden"}>
 					<Typography
 						variant="subtitle1"
 						fontFamily={"Inter"}

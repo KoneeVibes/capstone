@@ -23,16 +23,19 @@ export const LeadershipWrapper = styled(Stack)(({ theme }) => {
 			border: "1px solid var(--yellow-color)",
 		},
 		"& .visioner-stack": {
+			height: "stretch",
 			borderRadius: "30px",
 			"& .thumbnail-area": {
 				backgroundColor: "var(--primary-color)",
 				borderRadius: "inherit",
 				flex: 1,
 				overflow: "hidden",
-				height: "-webkit-fill-available",
+				height: "stretch",
 				"& img": {
+					display: "flex",
 					width: "100%",
-					height: "-webkit-fill-available",
+					height: "100%",
+					objectFit: "cover",
 				},
 			},
 			"& .text-area": {
@@ -42,6 +45,7 @@ export const LeadershipWrapper = styled(Stack)(({ theme }) => {
 				overflow: "hidden",
 				"& .qualifications": {
 					flexWrap: "wrap",
+					overflow: "hidden",
 					flexDirection: "row",
 					gap: "calc(var(--flex-gap)/9)",
 					"& .qualification-item": {
@@ -66,6 +70,9 @@ export const LeadershipWrapper = styled(Stack)(({ theme }) => {
 				alignItems: "center",
 				flexDirection: "row",
 				backgroundColor: "var(--primary-color-variant-VIII)",
+				"& .thumbnail-area": {
+					flex: "0 1 18.3125rem",
+				},
 				"& .text-area": {
 					padding: "calc(var(--basic-padding)/3)",
 				},

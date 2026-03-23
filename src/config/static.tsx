@@ -22,6 +22,10 @@ import globalPerspective from "../assets/icons/global-perspective.svg";
 import clientCentric from "../assets/icons/client-centric.svg";
 import excellenceStandard from "../assets/icons/excellence-standard.svg";
 import visionerI from "../assets/images/nsikan-ekong.png";
+import visionerII from "../assets/images/utenge-okon.png";
+import visionerIII from "../assets/images/rebecca-june.png";
+import visionerIV from "../assets/images/hyginus-ikwanusi.png";
+import visionerV from "../assets/images/idongesit-udofia.png";
 
 export const navLinks = [
 	{
@@ -202,13 +206,13 @@ export const corePracticeAreas = [
 	},
 	{
 		count: "Practice 02",
-		title: "Dispute Resolution",
-		body: "Encompassing both traditional litigation and Alternative Dispute Resolution (ADR), we vigorously pursue and protect our clients' interests. We advise on the commercial implications of every dispute, deliver tailor-made solutions, and ensure successful outcomes — whether through negotiation, settlement, or judicial decision.",
+		title: "Corporate & Commercial Advisory",
+		body: "Comprehensive legal and strategic support at every stage of a business's growth cycle. From corporate structuring, regulatory compliance, and contract negotiation to mergers & acquisitions and governance — we help startups and established companies alike navigate legal complexities with confidence. Services include founders' agreements, IP protection, equity structuring, and more.",
 	},
 	{
 		count: "Practice 03",
-		title: "Dispute Resolution",
-		body: "Encompassing both traditional litigation and Alternative Dispute Resolution (ADR), we vigorously pursue and protect our clients' interests. We advise on the commercial implications of every dispute, deliver tailor-made solutions, and ensure successful outcomes — whether through negotiation, settlement, or judicial decision.",
+		title: "Transactions & Real Estate",
+		body: "Adding substantial value through expert structuring of negotiations, contract drafting, tendering processes, and due diligence. We assist companies and individuals in bringing complex transactions to a successful, cost- efficient conclusion — including aviation licensing, mortgage advisory, and property acquisition due diligence.",
 	},
 ];
 
@@ -294,40 +298,77 @@ export const frontrunners = [
 		name: "Nsikak Ekong, Esq.",
 		thumbnail: visionerI,
 		title: "Managing Director",
-		body: "A seasoned legal professional with hands-on experience in corporate advisory, startup advisory, regulatory compliance, contract negotiation, and transactional support. He has consistently provided strategic legal guidance to companies across real estate, finance, and business consulting — playing a critical role in safeguarding Capstone's clients with sound legal knowledge and policy-driven insights.",
+		body: "A seasoned legal professional, Nsikak holds a Bachelor of Laws (LL.B.) degree and is admitted as a Barrister and Solicitor of the Supreme Court of Nigeria. He also holds a Master of Laws (LL.M.) in Financial Law and Policy.",
 		qualification: [
 			"LL.M – Financial Law & Policy",
 			"LL.B - Barrister & Solicitor",
 		],
 	},
 	{
+		name: "Utenge Okon, Esq.",
+		thumbnail: visionerII,
+		title: "Executive Director & Head of Business Operations",
+		body: "A thoroughbred legal practitioner, Utenge has core expertise in International Law, litigation, and transactional advisory. He holds a Master’s degree in International Law from the University of Hull, United Kingdom, and combines his legal acumen with strong operational and business management skills to drive efficiency and excellence across Capstone’s diverse business lines.",
+		qualification: ["LL.M – International Law", "LL.B - Barrister & Solicitor"],
+	},
+	{
+		name: "Chris Ezeibe",
+		thumbnail: "",
+		title: "Chief Financial Officer",
+		body: "He is a licensed member of the Institute of Chartered Accountants of Nigeria (ICAN) with extensive professional experience spanning financial management, audit, taxation, risk management, and regulatory compliance. Chris has worked across complex financial environments, supporting organizations in strengthening internal controls, ensuring regulatory alignment, and driving sustainable financial performance.",
+		qualification: ["ICAN"],
+	},
+	{
+		name: "Rebecca June Lamb-Busby",
+		thumbnail: visionerIII,
+		title:
+			"Technical Advisor to the Board (International Academic Travel Advisory)",
+		body: "Rebecca provides specialist guidance on global education pathways and student mobility, Her appointment strengthens Capstone’s academic travel advisory practice, enhancing the Company’s capacity to deliver informed, student-centered, and globally aligned advisory services in international education consultancy.",
+		qualification: [],
+	},
+	{
+		name: "Idongesit Udofia, Esq.",
+		thumbnail: visionerV,
+		title:
+			"Non-Executive Director & Board Advisor (Corporate Governance and Risk)",
+		body: "With over a decade of experience in the financial sector, he brings a strong reputation for professionalism, sound judgment, and disciplined governance practice. His background equips him to provide informed guidance on strategic direction, risk oversight, and board effectiveness.",
+		qualification: ["LL.M", "LL.B - Barrister & Solicitor"],
+	},
+	{
+		name: "Hyginus Ikwuanusi, DBA",
+		thumbnail: visionerIV,
+		title:
+			"Non-Executive Director & Technical Advisor to the Board (Business Development)",
+		body: "Hyginus provides strategic oversight on growth architecture, operational scalability, performance management frameworks, and risk mitigation. His board-level governance exposure and MBA-level strategic orientation position him to guide Capstone’s expansion, strengthen performance, and ensure sustainable long-term value creation.",
+		qualification: ["MBA", "DBA"],
+	},
+];
+
+export const partners = [
+	{
 		name: "Nsikak Ekong, Esq.",
 		thumbnail: visionerI,
-		title: "Managing Director",
-		body: "A seasoned legal professional with hands-on experience in corporate advisory, startup advisory, regulatory compliance, contract negotiation, and transactional support. He has consistently provided strategic legal guidance to companies across real estate, finance, and business consulting — playing a critical role in safeguarding Capstone's clients with sound legal knowledge and policy-driven insights.",
+		title: "Managing Partner",
+		body: "A seasoned legal professional with hands-on experience in corporate advisory, startup advisory, regulatory compliance, contract negotiation, and transactional support. He has consistently provided strategic legal guidance to companies across real estate, finance, and business consulting — playing a critical role in safeguarding Capstone's clients withsound legal knowledge and policy-driven insights.",
 		qualification: [
 			"LL.M – Financial Law & Policy",
 			"LL.B - Barrister & Solicitor",
 		],
 	},
 	{
-		name: "Nsikak Ekong, Esq.",
-		thumbnail: visionerI,
-		title: "Managing Director",
-		body: "A seasoned legal professional with hands-on experience in corporate advisory, startup advisory, regulatory compliance, contract negotiation, and transactional support. He has consistently provided strategic legal guidance to companies across real estate, finance, and business consulting — playing a critical role in safeguarding Capstone's clients with sound legal knowledge and policy-driven insights.",
+		name: "Utenge Okon, Esq.",
+		thumbnail: visionerII,
+		title: "Managing Partner",
+		body: "A thoroughbred legal practitioner with core expertise in International Law, dispute resolution, and transactional advisory. He has personally represented high net-worth clients before superior courts of record, including the Court of Appeal and Supreme Court of Nigeria. His meticulous eye for detail in contract negotiations has made him a trusted counsel to numerous clients.",
 		qualification: [
 			"LL.M – Financial Law & Policy",
 			"LL.B - Barrister & Solicitor",
 		],
 	},
-	{
-		name: "Nsikak Ekong, Esq.",
-		thumbnail: visionerI,
-		title: "Managing Director",
-		body: "A seasoned legal professional with hands-on experience in corporate advisory, startup advisory, regulatory compliance, contract negotiation, and transactional support. He has consistently provided strategic legal guidance to companies across real estate, finance, and business consulting — playing a critical role in safeguarding Capstone's clients with sound legal knowledge and policy-driven insights.",
-		qualification: [
-			"LL.M – Financial Law & Policy",
-			"LL.B - Barrister & Solicitor",
-		],
-	},
+];
+
+export const mission = [
+	"Empower clients with breakthrough solutions",
+	"Foster a culture of competence and excellence",
+	"Drive impact that lasts",
 ];

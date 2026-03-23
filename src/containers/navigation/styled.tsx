@@ -39,7 +39,7 @@ export const NavigationWrapper = styled(Stack)(({ theme }) => {
 			left: 0,
 			right: 0,
 			background: "var(--light-color)",
-			height: "-webkit-fill-available",
+			height: "stretch",
 			zIndex: 10,
 			overflow: "auto",
 			gap: "calc(var(--flex-gap)/3)",

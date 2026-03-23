@@ -5,7 +5,7 @@ import lightVariantOfLogo from "../../../assets/logos/capstone-crescendo-brio-lo
 import primaryVariantOfLogo from "../../../assets/logos/capstone-crescendo-brio-logo-primary-color-variant.png";
 import { Hero } from "../../../containers/hero";
 import { Typography } from "@mui/material";
-import headerThumbnail from "../../../assets/images/capstone-crescendo-home-header-thumbnail.png";
+import headerThumbnail from "../../../assets/images/legal-excellence-home-header-thumbnail.png";
 import { BaseMarquee } from "../../../components/marquee";
 import { Sectors } from "../../../containers/sectors";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +13,8 @@ import { Advisory } from "../../../containers/advisory";
 import { CorePractice } from "../../../containers/corepractice";
 import { Protection } from "../../../containers/protection";
 import { LegalSupport } from "../../../containers/legalsupport";
+import { VisionAndMission } from "../../../containers/visionandmission";
+import { Visionaries } from "../../../containers/visionaries";
 
 export const LegalHome = () => {
 	const navigate = useNavigate();
@@ -24,6 +26,7 @@ export const LegalHome = () => {
 		e.preventDefault();
 		switch (id) {
 			case "callToActionI":
+				navigate("/services");
 				break;
 			case "callToActionII":
 				navigate("/");
@@ -79,9 +82,11 @@ export const LegalHome = () => {
 				handleCallToAction={handleHeaderCTAClick}
 			/>
 			<BaseMarquee background="var(--primary-color)" items={[<Sectors />]} />
+			<VisionAndMission />
 			<Advisory />
 			<CorePractice />
 			<Protection />
+			<Visionaries />
 			<LegalSupport />
 			<Footer
 				logo={lightVariantOfLogo}

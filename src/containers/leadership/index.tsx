@@ -70,7 +70,10 @@ export const Leadership = () => {
 						>
 							<Stack className="visioner-stack">
 								<Box component={"div"} className="thumbnail-area">
-									<img src={visioner.thumbnail} alt={visioner.name} />
+									<img
+										src={visioner.thumbnail}
+										alt={visioner.thumbnail ? visioner.name : ""}
+									/>
 								</Box>
 								<Stack className="text-area">
 									<Box>
@@ -84,6 +87,17 @@ export const Leadership = () => {
 											color={"var(--dark-color-variant-XIV)"}
 										>
 											{visioner.name}
+										</Typography>
+										<Typography
+											variant="subtitle2"
+											fontFamily={"Inter"}
+											fontWeight={400}
+											fontSize={10.9}
+											lineHeight={"normal"}
+											whiteSpace={"normal"}
+											color={"var(--primary-color-variant-I)"}
+										>
+											{visioner.title}
 										</Typography>
 									</Box>
 									<Box>

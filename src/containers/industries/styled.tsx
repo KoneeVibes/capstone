@@ -23,7 +23,7 @@ export const IndustriesWrapper = styled(Stack)(({ theme }) => {
 		},
 		"& .industry-stack": {
 			borderRadius: "20px",
-			height: "-webkit-fill-available",
+			height: "stretch",
 			background: "var(--light-color-variant-V)",
 			"& .thumbnail-area": {
 				overflow: "hidden",

@@ -1,0 +1,87 @@
+import { Stack, styled } from "@mui/material";
+
+export const VisionariesWrapper = styled(Stack)(({ theme }) => {
+	return {
+		gap: "calc(var(--flex-gap)/3)",
+		background: "var(--primary-color-variant-V)",
+		padding: "calc(var(--basic-padding)/3)",
+		"& .heading-area": {
+			maxWidth: "40rem",
+			gap: "calc(var(--flex-gap)/9)",
+			"& .title": {
+				flexDirection: "row",
+				alignItems: "center",
+				overflow: "hidden",
+				justifyContent: "center",
+				gap: "calc(var(--flex-gap)/12)",
+			},
+		},
+		"& .visioners-area": {
+			gap: "calc(var(--flex-gap)/6)",
+			"& .visioner-stack": {
+				borderRadius: "30px",
+				backgroundColor: "var(--light-color)",
+				"& .thumbnail-area": {
+					backgroundColor: "var(--primary-color)",
+					borderRadius: "inherit",
+					flex: 1,
+					overflow: "hidden",
+					height: "stretch",
+					"& img": {
+						display: "flex",
+						width: "100%",
+						height: "100%",
+						borderRadius: "inherit",
+					},
+				},
+				"& .text-area": {
+					gap: "calc(var(--flex-gap)/6)",
+					padding: "calc(var(--basic-padding)/6)",
+					flex: 1,
+					overflow: "hidden",
+					"& .qualifications": {
+						flexWrap: "wrap",
+						overflow: "hidden",
+						flexDirection: "row",
+						gap: "calc(var(--flex-gap)/9)",
+						"& .qualification-item": {
+							overflow: "hidden",
+							backgroundColor: "var(--primary-color-variant-VII)",
+							padding: "calc(var(--basic-padding)/24)",
+						},
+					},
+				},
+			},
+		},
+		"& .border-line": {
+			maxWidth: "3rem",
+			maxHeight: 0,
+			flex: "0 1 3rem",
+			border: "1px solid var(--yellow-color)",
+		},
+		[theme.breakpoints.up("miniTablet")]: {
+			"& .heading-area": {
+				marginLeft: "auto",
+				marginRight: "auto",
+			},
+		},
+		[theme.breakpoints.up("tablet")]: {
+			padding: "calc(var(--basic-padding)/2)",
+			"& .visioners-area": {
+				"& .visioner-stack": {
+					alignItems: "center",
+					flexDirection: "row",
+					"& .thumbnail-area": {
+						flex: "0 1 18.3125rem",
+						"& img": {
+							maxHeight: "30rem",
+						},
+					},
+					"& .text-area": {
+						padding: "calc(var(--basic-padding)/3)",
+					},
+				},
+			},
+		},
+	};
+});

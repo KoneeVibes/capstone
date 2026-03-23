@@ -18,7 +18,7 @@ export const BaseFormModalWrapper = styled(Dialog)(({ theme }) => {
 					gap: "calc(var(--flex-gap)/6)",
 					justifyContent: "space-between",
 					background: "var(--primary-color)",
-					padding: "calc(var(--basic-padding)/3)",
+					padding: "calc(var(--basic-padding)/6)",
 					"& .header-text": {
 						flex: 1,
 						overflow: "hidden",
