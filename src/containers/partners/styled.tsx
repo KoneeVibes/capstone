@@ -26,7 +26,6 @@ export const PartnersWrapper = styled(Stack)(({ theme }) => {
 			borderRadius: "20px",
 			gap: "calc(var(--flex-gap)/3)",
 			border: "1px solid var(--dark-color-variant-VII)",
-			height: "stretch",
 			padding: "calc(var(--basic-padding)/6)",
 			justifyContent: "space-between",
 			"& .icon-area": {

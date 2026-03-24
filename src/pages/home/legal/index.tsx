@@ -1,8 +1,8 @@
 import { LegalHomeWrapper } from "./styled";
 import { Footer } from "../../../containers/footer";
 import { Navigation } from "../../../containers/navigation";
-import lightVariantOfLogo from "../../../assets/logos/capstone-crescendo-brio-logo-light-color-variant.png";
-import primaryVariantOfLogo from "../../../assets/logos/capstone-crescendo-brio-logo-primary-color-variant.png";
+import lightVariantOfLogo from "../../../assets/logos/capstone-legal-brio-logo-dark-color-variant.png";
+import primaryVariantOfLogo from "../../../assets/logos/capstone-legal-brio-logo-light-color-variant.png";
 import { Hero } from "../../../containers/hero";
 import { Typography } from "@mui/material";
 import headerThumbnail from "../../../assets/images/legal-excellence-home-header-thumbnail.png";

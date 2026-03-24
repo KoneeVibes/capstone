@@ -28,7 +28,6 @@ export const ComprehensiveSolutionsWrapper = styled(Stack)(({ theme }) => {
 		"& .solution-stack": {
 			borderRadius: "20px",
 			gap: "calc(var(--flex-gap)/6)",
-			height: "stretch",
 			justifyContent: "space-between",
 			backgroundColor: "var(--light-color)",
 			padding: "calc(var(--basic-padding)/6)",

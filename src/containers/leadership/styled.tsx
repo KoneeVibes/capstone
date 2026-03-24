@@ -23,7 +23,6 @@ export const LeadershipWrapper = styled(Stack)(({ theme }) => {
 			border: "1px solid var(--yellow-color)",
 		},
 		"& .visioner-stack": {
-			height: "stretch",
 			borderRadius: "30px",
 			"& .thumbnail-area": {
 				backgroundColor: "var(--primary-color)",

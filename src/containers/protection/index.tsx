@@ -59,6 +59,7 @@ export const Protection = () => {
 					return (
 						<Grid
 							key={index}
+							display={"flex"}
 							overflow={"hidden"}
 							size={{ mobile: 12, miniTablet: 6, laptop: 4 }}
 						>
