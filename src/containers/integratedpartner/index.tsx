@@ -70,11 +70,11 @@ export const IntegratedPartner = () => {
 					>
 						Capstone Crescendo Brio Limited is a multidisciplinary company
 						dedicated to fostering unparalleled growth and delivering innovative
-						solutions across diverse sectors. With strategic offices in Abuja
-						FCT and Uyo, Akwa Ibom, we are perfectly positioned to serve both
-						local and international markets — deeply understanding the unique
-						needs of every client while providing accessible, responsive
-						services that drive measurable results.
+						solutions across diverse sectors. With strategic offices in FCT
+						Abuja, Lagos and Uyo, Akwa Ibom, we are perfectly positioned to
+						serve both local and international markets — deeply understanding
+						the unique needs of every client while providing accessible,
+						responsive services that drive measurable results.
 					</Typography>
 				</Box>
 			</Stack>

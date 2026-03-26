@@ -26,6 +26,7 @@ import visionerII from "../assets/images/utenge-okon.png";
 import visionerIII from "../assets/images/rebecca-june.png";
 import visionerIV from "../assets/images/hyginus-ikwanusi.png";
 import visionerV from "../assets/images/idongesit-udofia.png";
+import visionerVI from "../assets/images/chris-ezeibe.png";
 
 export const navLinks = [
 	{
@@ -89,16 +90,17 @@ export const comms = [
 	{
 		icon: locationIcon,
 		name: "location",
-		value: "Abuja FCT & Uyo, Akwa Ibom",
+		value: "FCT Abuja, Lagos & Uyo, Akwa Ibom",
 	},
 ];
 
 export const sectorList = [
-	"Infrastructure Development",
-	"Renewable Energy",
 	"Real Estate Consultancy",
 	"Business Advisory",
-	"Real Estate Consultancy",
+	"General Contracts & Supplies",
+	"Oil & Gas Supplies",
+	"Academic Travel Advisory",
+	"Technology Solutions",
 ];
 
 export const solutions = [
@@ -298,32 +300,29 @@ export const frontrunners = [
 		name: "Nsikak Ekong, Esq.",
 		thumbnail: visionerI,
 		title: "Managing Director",
-		body: "A seasoned legal professional, Nsikak holds a Bachelor of Laws (LL.B.) degree and is admitted as a Barrister and Solicitor of the Supreme Court of Nigeria. He also holds a Master of Laws (LL.M.) in Financial Law and Policy.",
-		qualification: [
-			"LL.M – Financial Law & Policy",
-			"LL.B - Barrister & Solicitor",
-		],
+		body: "Nsikak Ekong is the Managing Director of Capstone Limited, where he leads the company’s strategic direction and oversees its operations across all business areas. With a strong background in business advisory and corporate strategy, he has worked closely with organizations in real estate, finance, and consulting, helping them make sound decisions, manage risk, and achieve sustainable growth. At Capstone, Nsikak is focused on driving innovation, strengthening partnerships, and delivering value-driven solutions that position the company for long-term success.",
+		qualification: ["LL.M - Financial Law and Policy", "B.L", "LL.B"],
 	},
 	{
 		name: "Utenge Okon, Esq.",
 		thumbnail: visionerII,
 		title: "Executive Director & Head of Business Operations",
-		body: "A thoroughbred legal practitioner, Utenge has core expertise in International Law, litigation, and transactional advisory. He holds a Master’s degree in International Law from the University of Hull, United Kingdom, and combines his legal acumen with strong operational and business management skills to drive efficiency and excellence across Capstone’s diverse business lines.",
-		qualification: ["LL.M – International Law", "LL.B - Barrister & Solicitor"],
+		body: "Utenge Okon serves as Executive Director and Head of Business Operations at Capstone Limited, where he oversees operational strategy and ensures the efficient delivery of the company’s core services. With a strong background in business operations, advisory, and cross-border engagements, he brings a structured and detail-driven approach to managing processes, partnerships, and client relationships.Utenge is focused on driving operational excellence, strengthening internal systems, and ensuring consistent value delivery across all of Capstone’s business lines.",
+		qualification: ["LL.M - International Law", "B.L", "LL.B"],
 	},
 	{
 		name: "Chris Ezeibe",
-		thumbnail: "",
+		thumbnail: visionerVI,
 		title: "Chief Financial Officer",
-		body: "He is a licensed member of the Institute of Chartered Accountants of Nigeria (ICAN) with extensive professional experience spanning financial management, audit, taxation, risk management, and regulatory compliance. Chris has worked across complex financial environments, supporting organizations in strengthening internal controls, ensuring regulatory alignment, and driving sustainable financial performance.",
-		qualification: ["ICAN"],
+		body: "Chris Ezeibe is the Chief Financial Officer of Capstone Limited, where he leads the company’s financial strategy and oversees its financial operations.A Chartered Accountant and member of the Institute of Chartered Accountants of Nigeria (ICAN), he brings extensive experience in financial management, audit, and risk control across diverse business environments.",
+		qualification: [],
 	},
 	{
 		name: "Rebecca June Lamb-Busby",
 		thumbnail: visionerIII,
 		title:
 			"Technical Advisor to the Board (International Academic Travel Advisory)",
-		body: "Rebecca provides specialist guidance on global education pathways and student mobility, Her appointment strengthens Capstone’s academic travel advisory practice, enhancing the Company’s capacity to deliver informed, student-centered, and globally aligned advisory services in international education consultancy.",
+		body: "Rebecca June Lamb-Busby serves as Technical Advisor to the Board at Capstone Limited, providing guidance on international education pathways and student mobility. With strong international exposure and experience in student advisory and global education engagement, she supports the development of practical, student-focused solutions for studying abroad.",
 		qualification: [],
 	},
 	{
@@ -331,16 +330,16 @@ export const frontrunners = [
 		thumbnail: visionerV,
 		title:
 			"Non-Executive Director & Board Advisor (Corporate Governance and Risk)",
-		body: "With over a decade of experience in the financial sector, he brings a strong reputation for professionalism, sound judgment, and disciplined governance practice. His background equips him to provide informed guidance on strategic direction, risk oversight, and board effectiveness.",
-		qualification: ["LL.M", "LL.B - Barrister & Solicitor"],
+		body: "Idongesit Udofia serves as a Non-Executive Director and Board Advisor at Capstone Limited, providing independent oversight and strategic guidance on governance and risk. With over a decade of experience in the financial sector, he brings a disciplined approach to decision-making, risk management, and board effectiveness.",
+		qualification: ["LL.M", "B.L", "LL.B"],
 	},
 	{
 		name: "Hyginus Ikwuanusi, DBA",
 		thumbnail: visionerIV,
 		title:
 			"Non-Executive Director & Technical Advisor to the Board (Business Development)",
-		body: "Hyginus provides strategic oversight on growth architecture, operational scalability, performance management frameworks, and risk mitigation. His board-level governance exposure and MBA-level strategic orientation position him to guide Capstone’s expansion, strengthen performance, and ensure sustainable long-term value creation.",
-		qualification: ["MBA", "DBA"],
+		body: "Hyginus Ikwuanusi serves as a Non-Executive Director and Technical Advisor to the Board at Capstone Limited, providing strategic guidance on business growth and development. With extensive experience across multiple sectors, he brings a results-driven approach to scaling operations, improving performance, and driving sustainable growth.",
+		qualification: [],
 	},
 ];
 
@@ -349,21 +348,15 @@ export const partners = [
 		name: "Nsikak Ekong, Esq.",
 		thumbnail: visionerI,
 		title: "Managing Partner",
-		body: "A seasoned legal professional with hands-on experience in corporate advisory, startup advisory, regulatory compliance, contract negotiation, and transactional support. He has consistently provided strategic legal guidance to companies across real estate, finance, and business consulting — playing a critical role in safeguarding Capstone's clients withsound legal knowledge and policy-driven insights.",
-		qualification: [
-			"LL.M – Financial Law & Policy",
-			"LL.B - Barrister & Solicitor",
-		],
+		body: "A seasoned legal professional with hands-on experience in corporate advisory, startup advisory, regulatory compliance, contract negotiation, and transactional support. He has consistently provided strategic legal guidance to companies across real estate, finance, and business consulting — playing a critical role in safeguarding Capstone's clients with sound legal knowledge and policy-driven insights.",
+		qualification: ["LL.M - Financial Law and Policy", "B.L", "LL.B"],
 	},
 	{
 		name: "Utenge Okon, Esq.",
 		thumbnail: visionerII,
-		title: "Managing Partner",
+		title: "Senior Partner",
 		body: "A thoroughbred legal practitioner with core expertise in International Law, dispute resolution, and transactional advisory. He has personally represented high net-worth clients before superior courts of record, including the Court of Appeal and Supreme Court of Nigeria. His meticulous eye for detail in contract negotiations has made him a trusted counsel to numerous clients.",
-		qualification: [
-			"LL.M – Financial Law & Policy",
-			"LL.B - Barrister & Solicitor",
-		],
+		qualification: ["LL.M - International Law", "B.L", "LL.B"],
 	},
 ];
 

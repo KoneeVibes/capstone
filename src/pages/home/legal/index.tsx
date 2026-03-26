@@ -93,7 +93,7 @@ export const LegalHome = () => {
 				copyright={
 					"©2025 Capstone Crescendo Brio Limited. All rights reserved."
 				}
-				message="A dynamic, forward-thinking company dedicated to fostering growth and delivering innovative solutions across diverse sectors."
+				message="A dynamic, forward-thinking legal firm committed to transforming legal excellence into a catalyst for growth."
 			/>
 		</LegalHomeWrapper>
 	);
