@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AppContext } from "../../context";
 import { NavigationWrapper } from "./styled";
 import { useNavigate } from "react-router-dom";
@@ -15,6 +15,14 @@ export const Navigation: React.FC<NavigationPropsType> = ({ logo }) => {
 	const navigate = useNavigate();
 	const { openMenu, setOpenMenu, setIsContactFormOpen } =
 		useContext(AppContext);
+
+	useEffect(() => {
+		if (openMenu) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "visible";
+		}
+	}, [openMenu]);
 
 	const handleLogoClick = () => {
 		setOpenMenu(false);

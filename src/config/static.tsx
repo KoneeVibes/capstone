@@ -70,7 +70,7 @@ export const comms = [
 	{
 		icon: emailIcon,
 		name: "email",
-		value: "capstonescrescendobrioltd@gmail.com",
+		value: "info@capstoneglobalhq.com",
 	},
 	{
 		icon: phoneIcon,

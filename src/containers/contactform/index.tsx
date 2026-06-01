@@ -15,6 +15,7 @@ import { BaseFieldSet } from "../../components/form/fieldset/styled";
 import { BaseLabel } from "../../components/form/label/styled";
 import { BaseInput } from "../../components/form/input/styled";
 import { BaseButton } from "../../components/button/styled";
+import emailjs from "@emailjs/browser";
 
 export const ContactForm = () => {
 	const { isContactFormOpen, setIsContactFormOpen } = useContext(AppContext);
@@ -25,7 +26,6 @@ export const ContactForm = () => {
 			lastName: "",
 			email: "",
 			phone: "",
-			serviceInterest: "",
 			message: "",
 		};
 	}, []);
@@ -60,6 +60,20 @@ export const ContactForm = () => {
 		e.preventDefault();
 		setError(null);
 		setIsLoading(true);
+		try {
+			await emailjs.send(
+				import.meta.env.VITE_EMAILJS_SERVICE_ID,
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+				formDetails,
+				import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+			);
+			alert("Message sent successfully!");
+		} catch (error) {
+			console.error(error);
+			alert("Failed to send message.");
+		} finally {
+			setIsLoading(false);
+		}
 	};
 
 	const formHeader = (
@@ -159,16 +173,6 @@ export const ContactForm = () => {
 								name="phone"
 								type="phone"
 								value={formDetails.phone}
-								onChange={(e) => handleChange(e)}
-							/>
-						</BaseFieldSet>
-					</Grid>
-					<Grid overflow={"hidden"} size={12}>
-						<BaseFieldSet>
-							<BaseLabel>Service Interest</BaseLabel>
-							<BaseInput
-								name="serviceInterest"
-								value={formDetails.serviceInterest}
 								onChange={(e) => handleChange(e)}
 							/>
 						</BaseFieldSet>
