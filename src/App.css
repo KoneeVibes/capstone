@@ -12,6 +12,9 @@
 		--primary-color: #001b74;
 		--yellow-color: #c9a84c;
 		--red-color: #ff0000;
+		--green-color: #22b96d;
+		--border-color: #d6d6d6;
+
 		--light-color-variant-I: #ffffff61;
 		--light-color-variant-II: #ffffff14;
 		--light-color-variant-III: #ffffffc4;
@@ -21,6 +24,9 @@
 		--light-color-variant-VII: #f8f9ff;
 		--light-color-variant-VIII: #e7e7e7;
 		--light-color-variant-IX: #ffffffe0;
+		--light-color-variant-X: #fcfcfc;
+		--light-color-variant-XI: #e5e5e5;
+		--light-color-variant-XII: #cccccc;
 		--dark-color-variant-I: #0f1114;
 		--dark-color-variant-II: #171717;
 		--dark-color-variant-III: #30303099;
@@ -39,6 +45,17 @@
 		--dark-color-variant-XVI: #9aa7b7;
 		--dark-color-variant-XVII: #4d4d4d;
 		--dark-color-variant-XVIII: #35353580;
+		--dark-color-variant-XIX: #050b1099;
+		--dark-color-variant-XX: #3b3b3b;
+		--dark-color-variant-XXI: #050b1080;
+		--dark-color-variant-XXII: #9f9f9f;
+		--dark-color-variant-XXIII: #818181;
+		--dark-color-variant-XXIV: #797979;
+		--dark-color-variant-XXV: #f8f8f8;
+		--dark-color-variant-XXVI: #12211c;
+		--dark-color-variant-XXVII: #6a6a6a;
+		--dark-color-variant-XXVIII: #dadada;
+		--dark-color-variant-XXVIV: #414141;
 		--primary-color-variant-I: #3f92ff;
 		--primary-color-variant-II: #000e3b;
 		--primary-color-variant-III: #1e7fff;
@@ -48,7 +65,8 @@
 		--primary-color-variant-VII: #3f92ff2e;
 		--primary-color-variant-VIII: #f6faff;
 		--primary-color-variant-IX: #e7f1ff;
-		--border-color: #d6d6d6;
+		--border-color-variant-I: #ebebeb;
+		--border-color-variant-II: #d5d5d5;
 
 		--basic-padding: 9rem;
 		--basic-margin: 9rem;

@@ -46,7 +46,7 @@ export const NavigationWrapper = styled(Stack)(({ theme }) => {
 			alignItems: "center",
 			padding: "calc(var(--basic-padding)/6)",
 		},
-		"& .nav-menu": {
+		"& .nav-menu, & .nav-back": {
 			overflow: "hidden",
 		},
 		"& a": {
