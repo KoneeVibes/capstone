@@ -44,23 +44,33 @@ export type PropertyInquiryNavigationPropsType = {
 	handleReset: () => void;
 };
 
-export type PropertyInquiryFormPropsType = {
-	inquiryForm: SearchFormDetailsType;
-	onInvoiceCreated: (invoiceId: string) => void;
-	setInquiryForm: React.Dispatch<React.SetStateAction<SearchFormDetailsType>>;
-};
-
 export type InquiryDetailsType = {
 	invoiceId: string | null;
+	trackingId: string | null;
+};
+
+export type PropertyInquiryFormPropsType = {
+	inquiryForm: SearchFormDetailsType;
+	onInvoiceCreated: ({
+		invoiceId,
+		trackingId,
+	}: {
+		invoiceId: NonNullable<InquiryDetailsType["invoiceId"]>;
+		trackingId: NonNullable<InquiryDetailsType["trackingId"]>;
+	}) => void;
+	setInquiryForm: React.Dispatch<React.SetStateAction<SearchFormDetailsType>>;
 };
 
 export type PropertyInquiryCostSummaryPropsType = {
 	inquiryDetails: InquiryDetailsType;
-};
-
-export type PropertyInquiryPaymentAreaPropsType = {
 	onPaymentSuccess: () => void;
 };
+
+export type PropertyInquiryReceiptAreaPropsType = Omit<
+	PropertyInquiryCostSummaryPropsType,
+	"onPaymentSuccess"
+> &
+	Omit<PropertyInquiryFormPropsType, "onInvoiceCreated" | "setInquiryForm">;
 
 export type LocationType = {
 	state: string;
@@ -68,3 +78,13 @@ export type LocationType = {
 	city: string;
 	rate: number;
 };
+
+export type CaseStatus =
+	| "submitted"
+	| "payment-validated"
+	| "assigned"
+	| "accepted"
+	| "pending-information"
+	| "under-review"
+	| "closed"
+	| "suspended";

@@ -207,7 +207,10 @@ export const SearchForm: React.FC<
 			const response = await addCaseService(formData);
 			if (response.status === "success") {
 				setIsLoading(false);
-				onInvoiceCreated(response?.data?.invoiceId);
+				onInvoiceCreated({
+					invoiceId: response?.data?.invoiceId,
+					trackingId: response?.data?.trackingId,
+				});
 				handleNext();
 			} else {
 				setIsLoading(false);

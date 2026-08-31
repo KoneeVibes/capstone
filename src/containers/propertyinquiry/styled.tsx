@@ -83,6 +83,9 @@ export const PropertyInquiryWrapper = styled(Stack)(({ theme }) => {
 					paddingLeft: "18px",
 					borderLeft: "3px solid var(--light-color-variant-XII)",
 				},
+				"& .MuiStepContent-last": {
+					borderLeft: "none",
+				},
 				"& .MuiTypography-root": {
 					fontFamily: "Noto Sans Lao",
 					fontWeight: 500,

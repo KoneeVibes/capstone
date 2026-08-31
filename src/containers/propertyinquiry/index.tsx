@@ -13,7 +13,7 @@ import type {
 	InquiryDetailsType,
 	SearchFormDetailsType,
 } from "../../types/container.type";
-import { PaymentArea } from "../paymentarea";
+import { ConfirmationArea } from "../confirmationarea";
 
 export const PropertyInquiry = () => {
 	const steps = [
@@ -22,16 +22,13 @@ export const PropertyInquiry = () => {
 			description: "Provide the property details",
 		},
 		{
-			label: "Cost Breakdown",
-			description: "Review the service fees and cost breakdown",
+			label: "Cost Breakdown & Payment",
+			description:
+				"Review the service fees and cost breakdown & complete your payment",
 		},
 		{
-			label: "Payment",
-			description: "Complete your payment",
-		},
-		{
-			label: "Receipt",
-			description: "View and download your payment receipt",
+			label: "Confirmation & Tracking",
+			description: "View your payment confirmation and tracking details",
 		},
 	];
 
@@ -55,6 +52,7 @@ export const PropertyInquiry = () => {
 
 	const initialInquiryDetails: InquiryDetailsType = {
 		invoiceId: null,
+		trackingId: null,
 	};
 
 	const matches = useMediaQuery("(min-width:768px)");
@@ -76,16 +74,22 @@ export const PropertyInquiry = () => {
 
 	const handleReset = () => {
 		setInquiryForm(initialSearchDetails);
+		setInquiryDetails(initialInquiryDetails);
 		setActiveStep(0);
 	};
 
-	const handleInvoiceCreated = (invoiceId: string) => {
-		setInquiryDetails((current) => ({ ...current, invoiceId }));
+	const handleInvoiceCreated = ({
+		invoiceId,
+		trackingId,
+	}: {
+		invoiceId: NonNullable<InquiryDetailsType["invoiceId"]>;
+		trackingId: NonNullable<InquiryDetailsType["trackingId"]>;
+	}) => {
+		setInquiryDetails((current) => ({ ...current, invoiceId, trackingId }));
 	};
 
 	const handlePaymentSuccess = () => {
-		setInquiryDetails(initialInquiryDetails);
-		handleReset();
+		setInquiryDetails((current) => ({ ...current, invoiceId: null }));
 	};
 
 	const renderForm = () => {
@@ -105,12 +109,19 @@ export const PropertyInquiry = () => {
 					/>
 				);
 			case 1:
-				return <CostSummary {...navigation} inquiryDetails={inquiryDetails} />;
+				return (
+					<CostSummary
+						{...navigation}
+						inquiryDetails={inquiryDetails}
+						onPaymentSuccess={handlePaymentSuccess}
+					/>
+				);
 			case 2:
 				return (
-					<PaymentArea
+					<ConfirmationArea
 						{...navigation}
-						onPaymentSuccess={handlePaymentSuccess}
+						inquiryForm={inquiryForm}
+						inquiryDetails={inquiryDetails}
 					/>
 				);
 			default:

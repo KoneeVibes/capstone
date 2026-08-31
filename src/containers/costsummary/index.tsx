@@ -7,12 +7,16 @@ import type {
 import { useQuery } from "@tanstack/react-query";
 import { retrieveInvoiceByIdService } from "../../util/invoice/retrieveInvoice";
 import { BaseButton } from "../../components/button/styled";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { settleInvoiceService } from "../../util/invoice/settleInvoice";
+import PaystackPop from "@paystack/inline-js";
 
 export const CostSummary: React.FC<
 	PropertyInquiryNavigationPropsType & PropertyInquiryCostSummaryPropsType
-> = ({ inquiryDetails, handleBack, handleNext }) => {
+> = ({ inquiryDetails, handleBack, handleNext, onPaymentSuccess }) => {
 	const { invoiceId } = inquiryDetails;
+
+	const popupRef = useRef<PaystackPop | null>(null);
 
 	const [error, setError] = useState<string | null>(null);
 	const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -35,10 +39,24 @@ export const CostSummary: React.FC<
 		try {
 			setError(null);
 			setIsLoading(true);
-			const response = await { status: "success" };
+			if (!invoiceId) return;
+			const response = await settleInvoiceService(invoiceId);
 			if (response.status === "success") {
+				const popup = new PaystackPop();
+				popupRef.current = popup;
+				popup.resumeTransaction(response?.data?.accessCode, {
+					onSuccess: () => {
+						onPaymentSuccess();
+						handleNext();
+					},
+					onCancel: () => {
+						setError("Payment was cancelled. You can try again.");
+					},
+					onError: (error) => {
+						setError(`Unable to load payment: ${error.message}`);
+					},
+				});
 				setIsLoading(false);
-				handleNext();
 			} else {
 				setIsLoading(false);
 				return setError("Cost form failed to submit. Please try again.");
