@@ -7,6 +7,7 @@ import { Visionaries } from "./pages/visionaries";
 import ScrollToTop from "./ScrollToTop";
 import { NotFoundError } from "./pages/notfound";
 import { Search } from "./pages/search";
+import { Track } from "./pages/track";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					<Route path="/services" element={<Services />} />
 					<Route path="/visionaries" element={<Visionaries />} />
 					<Route path="/property-intel/search" element={<Search />} />
+					<Route path="/property-intel/track" element={<Track />} />
 					<Route path="*" element={<NotFoundError />} />
 				</Routes>
 			</ScrollToTop>

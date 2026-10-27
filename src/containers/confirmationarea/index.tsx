@@ -52,7 +52,10 @@ export const ConfirmationArea: React.FC<
 
 	const { data: caseTimeline } = useQuery({
 		queryKey: ["caseTimeline", inquiryDetails?.trackingId],
-		queryFn: () => trackCaseService(inquiryDetails.trackingId!),
+		queryFn: async () => {
+			const response = await trackCaseService(inquiryDetails.trackingId!);
+			return response.data;
+		},
 		enabled: inquiryDetails?.trackingId !== null,
 	});
 
@@ -66,7 +69,7 @@ export const ConfirmationArea: React.FC<
 	const handleFormSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		// navigate to url to download mobile app
-		handleReset();
+		return handleReset?.();
 	};
 
 	return (

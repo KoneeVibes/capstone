@@ -14,7 +14,7 @@ export const trackCaseService = async (id: string) => {
 			console.error("Error:", res);
 			throw new Error(res.message);
 		}
-		return res.data;
+		return res;
 	} catch (error) {
 		console.error("API fetch error:", error);
 		throw error;

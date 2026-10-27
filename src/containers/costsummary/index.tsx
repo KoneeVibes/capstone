@@ -31,7 +31,7 @@ export const CostSummary: React.FC<
 		e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
 	) => {
 		e.preventDefault();
-		return handleBack();
+		return handleBack?.();
 	};
 
 	const handleFormSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
@@ -47,7 +47,7 @@ export const CostSummary: React.FC<
 				popup.resumeTransaction(response?.data?.accessCode, {
 					onSuccess: () => {
 						onPaymentSuccess();
-						handleNext();
+						handleNext?.();
 					},
 					onCancel: () => {
 						setError("Payment was cancelled. You can try again.");
@@ -56,7 +56,7 @@ export const CostSummary: React.FC<
 						setError(`Unable to load payment: ${error.message}`);
 					},
 				});
-				setIsLoading(false);
+				return setIsLoading(false);
 			} else {
 				setIsLoading(false);
 				return setError("Cost form failed to submit. Please try again.");

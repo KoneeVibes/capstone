@@ -39,14 +39,17 @@ export type SearchFormDetailsType = {
 };
 
 export type PropertyInquiryNavigationPropsType = {
-	handleNext: () => void;
-	handleBack: () => void;
-	handleReset: () => void;
+	handleNext?: () => void;
+	handleBack?: () => void;
+	handleReset?: () => void;
 };
 
 export type InquiryDetailsType = {
-	invoiceId: string | null;
-	trackingId: string | null;
+	invoiceId?: string | null;
+	trackingId?: string | null;
+	lastUpdated?: string | null;
+	propertyStatus?: string | null;
+	propertyAddress?: string | null;
 };
 
 export type PropertyInquiryFormPropsType = {
@@ -88,3 +91,26 @@ export type CaseStatus =
 	| "under-review"
 	| "closed"
 	| "suspended";
+
+export type TrackingFormDetailsType = {
+	id: string;
+};
+
+export type PropertyTrackingFormPropsType = {
+	inquiryForm: TrackingFormDetailsType;
+	setInquiryForm: React.Dispatch<React.SetStateAction<TrackingFormDetailsType>>;
+	onSubmission: ({
+		lastUpdated,
+		propertyStatus,
+		propertyAddress,
+	}: {
+		lastUpdated: NonNullable<InquiryDetailsType["lastUpdated"]>;
+		propertyStatus: NonNullable<InquiryDetailsType["propertyStatus"]>;
+		propertyAddress: NonNullable<InquiryDetailsType["propertyAddress"]>;
+	}) => void;
+};
+
+export type PropertyTrackingDetailsPropsType = {
+	inquiryDetails: InquiryDetailsType;
+	inquiryForm: TrackingFormDetailsType;
+};

@@ -16,7 +16,7 @@ export const PropertyIntel = () => {
 				navigate("/property-intel/search");
 				break;
 			case "track":
-				// navigate("/property-intel/track");
+				navigate("/property-intel/track");
 				break;
 			default:
 				return;

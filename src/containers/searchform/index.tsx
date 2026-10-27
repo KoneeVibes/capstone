@@ -211,7 +211,7 @@ export const SearchForm: React.FC<
 					invoiceId: response?.data?.invoiceId,
 					trackingId: response?.data?.trackingId,
 				});
-				handleNext();
+				return handleNext?.();
 			} else {
 				setIsLoading(false);
 				return setError(
@@ -222,7 +222,7 @@ export const SearchForm: React.FC<
 			setIsLoading(false);
 			const message = error instanceof Error ? error.message : "Unknown error";
 			setError(`Inquiry form failed to submit. ${message}`);
-			console.error("Inquiry form failed to submit:", error);
+			return console.error("Inquiry form failed to submit:", error);
 		}
 	};
 
