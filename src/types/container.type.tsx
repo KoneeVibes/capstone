@@ -50,6 +50,15 @@ export type InquiryDetailsType = {
 	lastUpdated?: string | null;
 	propertyStatus?: string | null;
 	propertyAddress?: string | null;
+	statusHistory?:
+		| {
+				status: string;
+				changedAt: Date;
+				assigneeId: string;
+				assigneeName: string;
+				note: string;
+		  }[]
+		| null;
 };
 
 export type PropertyInquiryFormPropsType = {
@@ -107,10 +116,12 @@ export type PropertyTrackingFormPropsType = {
 		lastUpdated: NonNullable<InquiryDetailsType["lastUpdated"]>;
 		propertyStatus: NonNullable<InquiryDetailsType["propertyStatus"]>;
 		propertyAddress: NonNullable<InquiryDetailsType["propertyAddress"]>;
+		statusHistory: NonNullable<InquiryDetailsType["statusHistory"]>;
 	}) => void;
 };
 
 export type PropertyTrackingDetailsPropsType = {
 	inquiryDetails: InquiryDetailsType;
 	inquiryForm: TrackingFormDetailsType;
+	handleOpenDrawer: (state: boolean) => void;
 };

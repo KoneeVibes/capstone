@@ -48,6 +48,7 @@ export const TrackingForm: React.FC<
 					lastUpdated: response?.data?.updatedAt,
 					propertyStatus: response?.data?.status,
 					propertyAddress: response?.data?.propertyAddress,
+					statusHistory: response?.data?.statusHistory,
 				});
 				return handleNext?.();
 			} else {

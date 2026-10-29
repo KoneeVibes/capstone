@@ -8,6 +8,7 @@ import locationIcon from "../../assets/icons/tracked-case-location.svg";
 export const PropertyDetailArea: React.FC<PropertyTrackingDetailsPropsType> = ({
 	inquiryForm,
 	inquiryDetails,
+	handleOpenDrawer,
 }) => {
 	return (
 		<PropertyDetailAreaWrapper>
@@ -108,8 +109,9 @@ export const PropertyDetailArea: React.FC<PropertyTrackingDetailsPropsType> = ({
 				</Grid>
 				<Grid overflow={"hidden"} size={{ mobile: 12 }}>
 					<Stack className="timeline-details">
-						{Object.entries(inquiryDetails ?? {}).map(
-							([key, value], index: number) => {
+						{Object.entries(inquiryDetails ?? {})
+							.filter(([key]) => !["statusHistory"].includes(key))
+							.map(([key, value], index: number) => {
 								return (
 									<Stack
 										key={index}
@@ -152,8 +154,7 @@ export const PropertyDetailArea: React.FC<PropertyTrackingDetailsPropsType> = ({
 										</Box>
 									</Stack>
 								);
-							},
-						)}
+							})}
 						<Box component={"div"} className="notice-board">
 							<Typography
 								variant={"body1"}
@@ -183,6 +184,10 @@ export const PropertyDetailArea: React.FC<PropertyTrackingDetailsPropsType> = ({
 								radius="8px"
 								colour="var(--light-color)"
 								padding="calc(var(--basic-padding)/9)"
+								onClick={(e) => {
+									e.preventDefault();
+									return handleOpenDrawer(true);
+								}}
 							>
 								<Typography
 									variant={"button"}
