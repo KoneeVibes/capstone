@@ -11,7 +11,8 @@ export type FooterPropsType = {
 
 export type HeroPropsType = {
 	message: string;
-	thumbnail: string;
+	tags?: string[];
+	thumbnail?: string;
 	title: React.ReactNode;
 	callToActionI?: string;
 	callToActionII?: string;

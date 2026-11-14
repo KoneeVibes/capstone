@@ -4,6 +4,7 @@ import type { HeroPropsType } from "../../types/container.type";
 import { BaseButton } from "../../components/button/styled";
 
 export const Hero: React.FC<HeroPropsType> = ({
+	tags,
 	title,
 	message,
 	subtitle,
@@ -82,10 +83,32 @@ export const Hero: React.FC<HeroPropsType> = ({
 						)}
 					</Stack>
 				)}
+				{tags && tags?.length > 0 && (
+					<Stack className="tags">
+						{tags.map((tag, index) => {
+							return (
+								<Box key={index} className="tag">
+									<Typography
+										variant="subtitle1"
+										fontFamily={"Inter"}
+										fontWeight={400}
+										fontSize={{ mobile: 11 }}
+										lineHeight={"normal"}
+										color={"var(--primary-color-variant--XIII)"}
+									>
+										{tag}
+									</Typography>
+								</Box>
+							);
+						})}
+					</Stack>
+				)}
 			</Stack>
-			<Box component={"div"} className="right-flank">
-				<img src={thumbnail} alt="Hero Thumbnail" />
-			</Box>
+			{thumbnail && (
+				<Box component={"div"} className="right-flank">
+					{thumbnail && <img src={thumbnail} alt="Hero Thumbnail" />}
+				</Box>
+			)}
 		</HeroWrapper>
 	);
 };
