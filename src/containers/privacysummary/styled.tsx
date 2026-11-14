@@ -49,7 +49,10 @@ export const PrivacySummaryWrapper = styled(Stack)(({ theme }) => {
 				padding: "calc(var(--basic-padding)/6)",
 				border: "1px solid var(--primary-color-variant--XIV)",
 				"& .nav-items": {
+					marginBlock: 0,
 					gap: "calc(var(--flex-gap)/12)",
+					listStyleType: "decimal-leading-zero",
+					paddingInlineStart: "calc(var(--basic-padding)/6)",
 				},
 			},
 			"& .content": {
@@ -95,7 +98,7 @@ export const PrivacySummaryWrapper = styled(Stack)(({ theme }) => {
 				flexDirection: "row",
 				gap: "calc(var(--flex-gap)/6)",
 				"& .navigation": {
-					flex: "0 1 150px",
+					flex: "0 1 200px",
 					height: "fit-content",
 				},
 				"& .content": {
@@ -106,7 +109,7 @@ export const PrivacySummaryWrapper = styled(Stack)(({ theme }) => {
 		[theme.breakpoints.up("laptop")]: {
 			"& .policy-area": {
 				"& .navigation": {
-					flex: "0 1 200px",
+					flex: "0 1 330px",
 				},
 			},
 		},

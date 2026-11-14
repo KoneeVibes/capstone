@@ -140,22 +140,26 @@ export const PrivacySummary = () => {
 							On this page
 						</Typography>
 					</Box>
-					<Stack className="nav-items">
+					<Stack component={"ol"} className="nav-items">
 						{Object.entries(privacyPolicy).map(([key, value]) => {
 							return (
-								<Box key={key} overflow={"hidden"}>
-									<Typography
-										variant="subtitle1"
-										fontFamily={"Inter"}
-										fontWeight={400}
-										fontSize={"13px"}
-										lineHeight={"normal"}
-										whiteSpace={"normal"}
-										sx={{ cursor: "pointer" }}
-										onClick={() => scrollTo(value.title)}
-										color={"var(--dark-color-variant-XXXVII)"}
-									>
-										{`${key}. ${value.title}`}
+								<Box
+									key={key}
+									component="li"
+									sx={{
+										cursor: "pointer",
+										fontFamily: "Inter",
+										fontWeight: 400,
+										fontSize: 13,
+										lineHeight: "normal",
+										whiteSpace: "normal",
+										textOverflow: "ellipsis",
+										color: "var(--dark-color-variant-XXXVII)",
+									}}
+									onClick={() => scrollTo(value.title)}
+								>
+									<Typography variant="subtitle1" whiteSpace={"normal"}>
+										{`${value.title}`}
 									</Typography>
 								</Box>
 							);
