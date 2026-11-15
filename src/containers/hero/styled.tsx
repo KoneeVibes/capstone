@@ -12,6 +12,17 @@ export const HeroWrapper = styled(Stack)(({ theme }) => {
 			"& .call-to-action": {
 				gap: "calc(var(--flex-gap)/12)",
 			},
+			"& .tags": {
+				flexWrap: "wrap",
+				flexDirection: "row",
+				gap: "calc(var(--flex-gap)/12)",
+				"& .tag": {
+					overflow: "hidden",
+					borderRadius: "24px",
+					padding: "calc(var(--basic-padding)/12)",
+					border: "1px solid var(--primary-color-variant-I)",
+				},
+			},
 		},
 		"& .right-flank": {
 			flex: 0.4,

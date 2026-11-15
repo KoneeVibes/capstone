@@ -8,6 +8,7 @@ export const BaseSelect = styled(Select)<BaseInputPropsType>(({
 	fontsize,
 	border,
 	radius,
+	padding,
 }) => {
 	return {
 		fontFamily: "Inter",
@@ -18,7 +19,7 @@ export const BaseSelect = styled(Select)<BaseInputPropsType>(({
 		borderRadius: radius || "9px",
 		color: colour || "var(--dark-color)",
 		backgroundColor: bgcolor || "transparent",
-		padding: "calc(var(--basic-padding)/3)",
+		padding: padding || "calc(var(--basic-padding)/9)",
 		outline: "none",
 		"& .MuiInputBase-input": {
 			textOverflow: "ellipsis",

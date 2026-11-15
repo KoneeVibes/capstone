@@ -14,6 +14,7 @@ import { ComprehensiveSolutions } from "../../../containers/comprehensivesolutio
 import { Industries } from "../../../containers/industries";
 import { Partners } from "../../../containers/partners";
 import { ReadyToBuild } from "../../../containers/readytobuild";
+import { PropertyIntel } from "../../../containers/propertyintel";
 
 export const CrescendoHome = () => {
 	const navigate = useNavigate();
@@ -86,6 +87,7 @@ export const CrescendoHome = () => {
 			<ComprehensiveSolutions />
 			<Industries />
 			<Partners />
+			<PropertyIntel />
 			<ReadyToBuild />
 			<Footer
 				logo={lightVariantOfLogo}

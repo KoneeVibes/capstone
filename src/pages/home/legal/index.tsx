@@ -15,6 +15,7 @@ import { Protection } from "../../../containers/protection";
 import { LegalSupport } from "../../../containers/legalsupport";
 import { VisionAndMission } from "../../../containers/visionandmission";
 import { Visionaries } from "../../../containers/visionaries";
+import { PropertyIntel } from "../../../containers/propertyintel";
 
 export const LegalHome = () => {
 	const navigate = useNavigate();
@@ -86,6 +87,7 @@ export const LegalHome = () => {
 			<Advisory />
 			<CorePractice />
 			<Protection />
+			<PropertyIntel />
 			<Visionaries />
 			<LegalSupport />
 			<Footer
